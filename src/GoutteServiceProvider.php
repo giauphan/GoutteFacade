@@ -1,6 +1,6 @@
 <?php
 
-namespace Weidner\Goutte;
+namespace Giauphan\Goutte;
 
 use Goutte\Client as GoutteClient;
 use Illuminate\Support\ServiceProvider;

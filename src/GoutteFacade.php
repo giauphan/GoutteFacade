@@ -1,11 +1,11 @@
 <?php
 
-namespace Weidner\Goutte;
+namespace Giauphan\Goutte;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Weidner\Goutte\Goutte
+ * @see \Giauphan\Goutte\Goutte
  */
 class GoutteFacade extends Facade
 {
