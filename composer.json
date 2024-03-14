@@ -1,5 +1,5 @@
 {
-    "name": "giauphan/goutte",
+    "name": "giauphan/GoutteFacade",
     "description": "Laravel Facade for Goutte, a simple PHP Web Scraper",
     "license": "MIT",
     "keywords": [
