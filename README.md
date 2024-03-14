@@ -14,7 +14,7 @@ In your terminal application move to the root directory of your laravel project 
 
 ```sh
 $ cd ~/Sites/laravel-example-project
-$ composer require weidner/goutte
+$ composer require giauphan/goutte
 ```
 
 This will add the following lines to your `composer.json` and download the project and its dependencies to your projects `./vendor` directory:
@@ -22,7 +22,7 @@ This will add the following lines to your `composer.json` and download the proje
 ```json
 // ./composer.json
 {
-    "name": "weidner/laravel-goutte-test",
+    "name": "giauphan/laravel-goutte-test",
     "description": "A dummy project used to test the Laravel Goutte Facade.",
 
     // ...
@@ -30,7 +30,7 @@ This will add the following lines to your `composer.json` and download the proje
     "require": {
         "php": "^7.2",
         "laravel/framework": "^8",
-        "weidner/goutte": "^2",
+        "giauphan/goutte": "^2",
         // ...
     },
 
@@ -57,7 +57,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Weidner\Goutte\GoutteServiceProvider::class, // [1] This will register the Package in the laravel echo system
+        giauphan\Goutte\GoutteServiceProvider::class, // [1] This will register the Package in the laravel echo system
 
         /*
          * Application Service Providers...
@@ -78,7 +78,7 @@ return [
 
         // ...
 
-        'Goutte' => Weidner\Goutte\GoutteFacade::class, // [2] It will register as an alias for the Goutte facade
+        'Goutte' => giauphan\Goutte\GoutteFacade::class, // [2] It will register as an alias for the Goutte facade
         'Hash' => Illuminate\Support\Facades\Hash::class,
 
         // ...
@@ -104,14 +104,14 @@ Route::get('/', function() {
 
 *TIP:* If you retrieve a "Class 'Goutte' not found"-Exception try to update the autoloader by running `composer dump-autoload` in your project root.
 
-*TIP:* You can use the package with [Lumen](https://lumen.laravel.com/) as well. Register the `GoutteServiceProvider` in `bootstrap/app.php` and provide the missing path to your configuration directory in your `AppServiceProvider` (ref [\#34](https://github.com/dweidner/laravel-goutte/issues/34/)).
+*TIP:* You can use the package with [Lumen](https://lumen.laravel.com/) as well. Register the `GoutteServiceProvider` in `bootstrap/app.php` and provide the missing path to your configuration directory in your `AppServiceProvider` (ref [\#34](https://github.com/dgiauphan/laravel-goutte/issues/34/)).
 
 ## Configuration
 
 You can customize the default request options to apply to each request of the client. Copy the default configuration to your application directory first:
 
 ```sh
-php artisan vendor:publish --provider="Weidner\Goutte\GoutteServiceProvider"
+php artisan vendor:publish --provider="giauphan\Goutte\GoutteServiceProvider"
 ```
 
 Open the created file in the `config/goutte.php` and customize the configuration options to your liking.
